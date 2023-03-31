@@ -1,6 +1,7 @@
-This sample provides a boiler plate for:
+This Repo provides as sample project that can be used as a boiler plate for:
 
-- React FrontEnd in using TS
+- React FrontEnd using TS
 - NodeJsBackEnd using Typescript capable of adding unit test with jest
 - FrontEnd can call backEnd
-- refer to readme on FrontEnd and backEnd for more details.
+
+Refer to readme on FrontEnd and backEnd for more details.
