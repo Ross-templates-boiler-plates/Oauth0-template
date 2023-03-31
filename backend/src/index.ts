@@ -8,10 +8,13 @@ const app = express();
 app.use(cors());
 
 //routes
-app.get("api/", (req, res) => res.status(200).json("hello from backend"));
+app.get("/api", (req, res) => {
+  console.log(`backEnd has been called`);
+  return res.status(200).json("Hello from backend");
+});
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server is Running on ${process.env.NODE_ENV} mode port ${PORT}`);
+  console.log(`Server is Running on port ${PORT}`);
 });
