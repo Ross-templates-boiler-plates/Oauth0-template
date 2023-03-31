@@ -4,6 +4,8 @@ commands:
 
 yarn create react-app frontend --template typescript
 
+yarn add axios @auth0/auth0-react
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
