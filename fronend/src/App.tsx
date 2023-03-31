@@ -13,13 +13,18 @@ const App = () => {
     getAccessTokenSilently,
     getIdTokenClaims,
   } = useAuth0();
+
+  //states
   const [generalMassage, setGeneralMassage] = useState(
     "No message from unprotected api on BackEnd yet"
   );
-
   const [protectedMassage, setProtectedMassage] = useState(
     "No message from protected api on BackEnd yet"
   );
+  const [accessToken, setAccessToken] = useState("No token yet");
+  const [IdToken, setIdToken] = useState("No token yet");
+
+  //call back ends
   const callBackEnd = async () => {
     const url = "http://localhost:5001/api/unprotected";
 
@@ -52,17 +57,13 @@ const App = () => {
     setProtectedMassage(data);
   };
 
-  const [accessToken, setAccessToken] = useState("No token yet");
-
-  const [IdToken, setIdToken] = useState("No token yet");
-
+  //show tokens
   const showAccessToken = async () => {
     if (isAuthenticated) {
       const temp = await getAccessTokenSilently();
       setAccessToken(temp);
     }
   };
-
   const showIdToken = async () => {
     if (isAuthenticated) {
       const temp1 = await getIdTokenClaims();
