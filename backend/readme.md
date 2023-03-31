@@ -19,7 +19,7 @@ yarn add express
 
 yarn add --dev @tsconfig/node18 (https://github.com/tsconfig/bases) or check if there is new node version.
 
-yarn add -D typescript ts-node nodemon jest ts-jest axios cors dotenv
+yarn add -D typescript ts-node nodemon jest ts-jest axios cors dotenv express-oauth2-jwt-bearer
 yarn add -D @types/node @types/express @types/jest @types/cors
 
 ## step 2: tsconfig
